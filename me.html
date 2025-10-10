@@ -38,6 +38,24 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .animated-gradient-text {
+            background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background-size: 400% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            animation: gradient-animation 3s linear infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+        }
+            100% {
+                background-position: 100% 50%;
+        }
+    }
         .nav-link::after {
             content: '';
             display: block;
@@ -63,7 +81,7 @@
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-wider gradient-text">Abu's Portfolio</a>
+            <a href="#" class="animated-gradient-text">Abu's Portfolio</a>
             <div class="hidden md:flex space-x-8">
                 <a href="#about" class="nav-link text-gray-300 hover:text-white transition duration-300">About</a>
                 <a href="#skills" class="nav-link text-gray-300 hover:text-white transition duration-300">Skills</a>
@@ -122,7 +140,7 @@
                  </div>
                  <div class="md:w-2/3">
                      <p class="text-lg text-gray-300 mb-4 leading-relaxed">
-                        I'm a 15 year old Muslim born and raised Los Angeles both my parents are from India, I like to play basketball and football. I have deep expertise in back-end technologies. I specialize in building robust, scalable, and efficient server-side applications and APIs. I am almost <u>always</u> available to do projects. 
+                        I'm a 15 year old born and raised Los Angeles both my parents are from India, I like to play basketball and football. I have deep expertise in back-end technologies. I specialize in building robust, scalable, and efficient server-side applications and APIs. I am almost <u>always</u> available to do projects. 
                     </p>
                  </div>
              </div>
@@ -209,7 +227,7 @@
     <!-- Footer -->
     <footer class="border-t border-gray-800">
         <div class="container mx-auto px-6 py-6 text-center text-gray-500">
-            <p>I like cats</p>
+            <p>"My life is my message" - Mahatama Gandh</p>
         </div>
     </footer>
 
@@ -273,6 +291,7 @@
     </script>
 </body>
 </html>
+
 
 
 
