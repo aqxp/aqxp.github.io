@@ -76,15 +76,13 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
-        .hide-scrollbar::-webkit-scrollbar {
-              display: none;
-        }
-        hide-scrollbar {
-              scrollbar-width: none;
-        
-        hide-scrollbar {
-              -ms-overflow-style: none;
-        }
+.container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox, Safari 18.2+, Chromium 121+ */
+}
+.container::-webkit-scrollbar { 
+    display: none;  /* Older Safari and Chromium */
+}
     </style>
 </head>
 <body class="w-full">
@@ -299,6 +297,7 @@
     </script>
 </body>
 </html>
+
 
 
 
